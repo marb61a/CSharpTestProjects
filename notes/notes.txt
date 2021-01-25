@@ -22,4 +22,9 @@ C# Scripting -> Framework
     - After adding projects then the solution will have to be built using the following command
         - dotnet build
         - If everything is working there should be a build succeeded message
-    - 
+    - There maybe a need in VSCode for certain items to be added
+        - There will be a message to add Required assets to build and debug
+        - Once accepted this will generate a .vscode folder
+    - To run tests use the following command
+        - dotnet test
+    -
