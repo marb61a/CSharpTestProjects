@@ -1,0 +1,23 @@
+C# Scripting -> Framework
+    - .NET Core is needed
+        - https://dotnet.microsoft.com/download/dotnet-core
+        - To check that .net is installed use the following command which should display the version being used
+            - dotnet --version
+    - Visual Studio Code is used but VS Community or another text editor can be used
+        - If using VS Code the C# extension will be needed
+        - Another extension being used is PackSharp
+    - Once PackSharp is installed it can be used via the command palette
+        - CTRL+SHIFT+P
+    - In this case the option to be chosen is New Project -> Class Library
+        - This will then have to be named and then hit enter
+    - The integrated terminal will show the actual command that was used by PackSharp
+        - dotnet new classlib --name <project name>
+    - If creating projects these will need to be added to the solution file
+        - The solution file will actually keep track of all your projects and your projects will keep track of all your dependencies
+        - The solution file is rarely opened
+        - To add projects to a solution use the following command
+            - dotnet sln add <projects name>
+    - After adding projects then the solution will have to be built using the following command
+        - dotnet build
+        - If everything is working there should be a build succeeded message
+    - 
