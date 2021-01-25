@@ -12,6 +12,8 @@ C# Scripting -> Framework
         - This will then have to be named and then hit enter
     - The integrated terminal will show the actual command that was used by PackSharp
         - dotnet new classlib --name <project name>
+    - To create an NUnit Test project use the previous and select NUint 3 Test Project which is the following on the command line
+        - dotnet new nunit --name <project name>
     - If creating projects these will need to be added to the solution file
         - The solution file will actually keep track of all your projects and your projects will keep track of all your dependencies
         - The solution file is rarely opened
