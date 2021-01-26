@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj": {}
+    "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj": {
+    "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
+        "projectUniqueName": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
         "projectName": "Royale.Tests",
-        "projectPath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
+        "projectPath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
         "packagesPath": "C:\\Users\\marb6\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\obj\\",
+        "outputPath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -52,6 +52,14 @@
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[3.16.1, )"
+            },
+            "Selenium.Support": {
+              "target": "Package",
+              "version": "[*, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[3.141.0, )"
             }
           },
           "imports": [

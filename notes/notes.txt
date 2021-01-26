@@ -27,4 +27,11 @@ C# Scripting -> Framework
         - Once accepted this will generate a .vscode folder
     - To run tests use the following command
         - dotnet test
-    -
+
+!! Filename
+    - Filename and class name should match when class is public and is the only class in the file
+
+Adding Selenium to project
+    - Open command palette
+    - Select PackSharp -> Bootstrap Selenium and then select the test project
+    

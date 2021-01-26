@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace Royale.Tests
 {
-    public class Tests
+    public class CardTests
     {
         [SetUp]
         public void Setup()
@@ -10,7 +10,7 @@ namespace Royale.Tests
         }
 
         [Test]
-        public void Test1()
+        public void Ice_Spirit_is_on_Cards_Page()
         {
             Assert.Pass();
         }
