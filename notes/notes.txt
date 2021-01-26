@@ -34,4 +34,27 @@ C# Scripting -> Framework
 Adding Selenium to project
     - Open command palette
     - Select PackSharp -> Bootstrap Selenium and then select the test project
-    
+
+Comparing Variables
+    - When using driver.FindElement to find elements thy type of object returned is an IWebElement
+    - This means that they cannot be compared to strings in an Assert statement
+    - They way to solve this is to use a Text directive at the end of a driver.FindElement  ie -> .Text;
+
+Scripting Problems
+    - Scripting without optimisation straegies has several issues
+    - Some of these are -> Repetition, Lack of Maintainability, Readibility issues
+    - These can be solved using what is called the Page Object Model
+
+!!! Test Issues
+    - Tests can fail for may reasons but some tend to repeat
+    - Pages that are not maximised that need to be in order for elements to show
+    - Popup elements such as accepting cookies
+
+Page Object Model
+    - It is a strategy to have 2 classes per Page
+        - The first class can be the page map ie what is on the page
+            - This should show what the user can do on the page
+            - It can be the functions and methods that use the elements in the map to perform user actions
+            - This can be thought of as a Page Map Pattern
+        - 
+    -
