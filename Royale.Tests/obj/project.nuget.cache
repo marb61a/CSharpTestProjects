@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FbNGvOJY/fJL2fRT7Qhv4hPGZQpbC04hM0IUvfg1tr3uajyfTrvBalYv+ZDexLt0WwH6naQkANyEIL12JuPeUw==",
+  "dgSpecHash": "JzsJQ4fxi46kuLWX1ND0sBlcQhZ2yCGJvzHxHIQEewdDRKsTpEMon1VjCKiakkT58B4P5+kqiCGiMkdh3p/R2w==",
   "success": true,
-  "projectFilePath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
+  "projectFilePath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marb6\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",

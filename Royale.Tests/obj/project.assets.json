@@ -4531,7 +4531,7 @@
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 3.16.1",
-      "Selenium.Support >= *",
+      "Selenium.Support >= 3.141.0",
       "Selenium.WebDriver >= 3.141.0"
     ]
   },
@@ -4542,11 +4542,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
       "projectName": "Royale.Tests",
-      "projectPath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
+      "projectPath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
       "packagesPath": "C:\\Users\\marb6\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\obj\\",
+      "outputPath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4590,7 +4590,7 @@
           },
           "Selenium.Support": {
             "target": "Package",
-            "version": "[*, )"
+            "version": "[3.141.0, )"
           },
           "Selenium.WebDriver": {
             "target": "Package",

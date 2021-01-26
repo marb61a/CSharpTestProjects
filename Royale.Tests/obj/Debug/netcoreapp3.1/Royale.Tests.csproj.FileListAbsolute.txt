@@ -94,3 +94,5 @@ C:\Users\marb6\OneDrive\Documents\CSharpTestProjects\Royale.Tests\obj\Debug\netc
 C:\Users\marb6\OneDrive\Documents\CSharpTestProjects\Royale.Tests\obj\Debug\netcoreapp3.1\Royale.Tests.dll
 C:\Users\marb6\OneDrive\Documents\CSharpTestProjects\Royale.Tests\obj\Debug\netcoreapp3.1\Royale.Tests.pdb
 C:\Users\marb6\OneDrive\Documents\CSharpTestProjects\Royale.Tests\obj\Debug\netcoreapp3.1\Royale.Tests.genruntimeconfig.cache
+C:\Users\marb6\OneDrive\Documents\CSharpTestProjects\Royale.Tests\bin\Debug\netcoreapp3.1\WebDriver.Support.dll
+C:\Users\marb6\OneDrive\Documents\CSharpTestProjects\Royale.Tests\bin\Debug\netcoreapp3.1\WebDriver.dll
