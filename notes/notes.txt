@@ -84,3 +84,7 @@ Lambda Operator
     - It can represent a method which takes a parameter and returns the successor of it
         - For example x => x + 1
 
+Abstract Class
+    - This means that this class can only be inherited by other objects and it cannot be instantiated by itself
+    - This means that it could be used on each page rather than just one
+    

@@ -3,6 +3,7 @@ using System.Linq;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using Royale.Pages;
 
 namespace Royale.Tests
 {
@@ -14,6 +15,9 @@ namespace Royale.Tests
         public void BeforeEach()
         {
             driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"));
+
+            // Go to statsroyale.com site
+            driver.Url = "https://statsroyale.com";
         }
 
         public void AfterEach(){
@@ -23,39 +27,29 @@ namespace Royale.Tests
         [Test]
         public void Ice_Spirit_is_on_Cards_Page()
         {
-            // Go to statsroyale.com site
-            driver.Url = "https://statsroyale.com";
-
             // Click the cards link in the header
-            driver.FindElement(By.CssSelector("a[href='/cards']")).Click();
+            // driver.FindElement(By.CssSelector("a[href='/cards']")).Click();
+            var cardsPage = new CardsPage(driver);
+            var iceSpirit = cardsPage.GoTo().GetCardByName("Ice Spirit");
 
             // Assert Ice Spirit is displayed
-            var iceSpirit = driver.FindElement(By.CssSelector("a[href*='Ice+Spirit']"));
             Assert.That(iceSpirit.Displayed);
 
         }
 
         public void Ice_Spirit_headers_are_correct_on_Details_Page()
         {
-            // Go to statsroyale.com site
-            driver.Url = "https://statsroyale.com";
 
-            // Click the cards link in the header
-            driver.FindElement(By.CssSelector("a[href='/cards']")).Click();
-
-            // Go to ice spirit
-            driver.FindElement(By.CssSelector("a[href*='Ice+Spirit']"));
+            new CardsPage(driver).GoTo().GetCardByName("Ice Spirit").Click();
+            var cardDetails = new CardDetailsPage(driver);
             
-            // Assert basic header stats
-            var cardName = driver.FindElement(By.CssSelector("[class*='cardName']")).Text;
-            var cardCategories = driver.FindElement(By.CssSelector(".card__rariry")).Text.Split(", ");
-            var cardType = cardCategories[0];
-            var cardArena = cardCategories[1];
-            var cardRarity = driver.FindElement(By.CssSelector(".card__common")).Text;
+            var (category, arena) = cardDetails.GetCardCategory();
+            var cardName = cardDetails.Map.CardName.Text;
+            var cardRarity = cardDetails.Map.CardRarity.Text.Split('\n').Last();
 
             Assert.AreEqual("Ice Spirit", cardName);
-            Assert.AreEqual("Troop", cardType);
-            Assert.AreEqual("Arena 8", cardArena);
+            Assert.AreEqual("Troop", category);
+            Assert.AreEqual("Arena 8", arena);
             Assert.AreEqual("Common", cardRarity);
 
         }
