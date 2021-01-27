@@ -2,7 +2,7 @@ using OpenQA.Selenium;
 
 namespace Royale.Pages
 {
-    public class PageBase
+    public abstract class PageBase
     {
         public readonly HeaderNav HeaderNav;
 
