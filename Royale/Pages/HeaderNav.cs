@@ -5,7 +5,15 @@ namespace Royale.Pages
 {
     public class HeaderNav
     {
+        public readonly HeaderNavMap Map;
 
+        public HeaderNav(IWebDriver driver)
+        {
+            Map = new HeaderNavMap(driver);
+        }
+        public void GoToCardsPage(){
+            Map.CardsTabLink.Click();
+        }
     }
 
     public class HeaderNavMap
