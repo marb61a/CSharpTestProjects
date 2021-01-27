@@ -16,12 +16,20 @@ namespace Royale.Tests
         {
             driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"));
 
+            // Maximize the browser window
+            driver.Manage().Window.Maximize();
+
             // Go to statsroyale.com site
             driver.Url = "https://statsroyale.com";
+
+            // Click the accept cookies button on the popup panel
+            driver.FindElement(By.CssSelector("#cmpwelcomebtnyes > a")).Click();
+            
         }
 
         public void AfterEach(){
-
+            // Close the browser window
+            driver.Quit();
         }
 
         [Test]
@@ -37,7 +45,7 @@ namespace Royale.Tests
 
         }
 
-        public void Ice_Spirit_headers_are_correct_on_Details_Page()
+        public void Ice_Spirit_headers_are_correct_on_Card_Details_Page()
         {
 
             new CardsPage(driver).GoTo().GetCardByName("Ice Spirit").Click();
@@ -51,6 +59,23 @@ namespace Royale.Tests
             Assert.AreEqual("Troop", category);
             Assert.AreEqual("Arena 8", arena);
             Assert.AreEqual("Common", cardRarity);
+
+        }
+
+        public void Mirror_headers_are_correct_on_Card_Details_Page()
+        {
+
+            new CardsPage(driver).GoTo().GetCardByName("Mirror").Click();
+            var cardDetails = new CardDetailsPage(driver);
+            
+            var (category, arena) = cardDetails.GetCardCategory();
+            var cardName = cardDetails.Map.CardName.Text;
+            var cardRarity = cardDetails.Map.CardRarity.Text.Split('\n').Last();
+
+            Assert.AreEqual("Mirror", cardName);
+            Assert.AreEqual("spell", category);
+            Assert.AreEqual("Arena 12", arena);
+            Assert.AreEqual("Epic", cardRarity);
 
         }
 
