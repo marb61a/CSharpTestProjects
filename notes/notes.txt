@@ -62,4 +62,25 @@ Page Object Model
     - It is best practice to clean up the project using the following command
         -  dotnet clean
     - Then do a rebuild using the dotnet build command
-    
+
+!!! When restore references does not show
+    - This can happen after running dotnet build
+    - Check the csproj files to ensure that there is a refernce to the csproj file on which the project depends
+    - This is similar to inheritance in OOP
+    - In the the projects being put together the dependencies are as follows
+        - Framework -> Royale -> Royale.Tests
+    - Royale.Tests should have a reference  to the Royale csproj file and ...
+        - This is in item group tags and is the following syntax
+        - <ProjectReference Include="..\Royale\Royale.csproj" />
+
+!!! Constructor
+    - Shortcut to creating a Constructor
+        - Type ctor and return twice
+    - Constructor has to be the same name as the class
+
+Lambda Operator
+    - => operator (C# reference)
+    - There are several different cases that this operator can be used for
+    - It can represent a method which takes a parameter and returns the successor of it
+        - For example x => x + 1
+
