@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vcQNOy3x/7Eqxb5bJnqkIG0u3zh+qD0s1GqV8u4zw7SLlIkLdyHo7Hz5trOLxHU2chHY0+IRtIPfhydNXzClJQ==",
+  "dgSpecHash": "I1ihIqs2oEU8KmqTUm7E4VTkiXvCK5BmSkU5AGwRLFeufb5D3SXyC5whs4hAblpBjwZUKkN50oHkuvXW8KVAVQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
+  "projectFilePath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

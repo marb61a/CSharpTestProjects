@@ -56,5 +56,10 @@ Page Object Model
             - This should show what the user can do on the page
             - It can be the functions and methods that use the elements in the map to perform user actions
             - This can be thought of as a Page Map Pattern
+            - Page Map Pattern is not required for the Page Object Model
         - 
-    -
+!!! When making major changes to a project
+    - It is best practice to clean up the project using the following command
+        -  dotnet clean
+    - Then do a rebuild using the dotnet build command
+    

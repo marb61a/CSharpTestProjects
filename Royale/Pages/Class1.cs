@@ -1,4 +1,5 @@
 ﻿using System;
+// using OpenQA.Selenium;
 
 namespace Royale.Pages
 {
@@ -9,7 +10,7 @@ namespace Royale.Pages
 
     public class HeaderNavMap
     {
-        public IWebElement CardsTabLink;
+        // public IWebElement CardsTabLink;
         
     }
 }
