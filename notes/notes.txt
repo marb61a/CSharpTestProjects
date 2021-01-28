@@ -87,4 +87,14 @@ Lambda Operator
 Abstract Class
     - This means that this class can only be inherited by other objects and it cannot be instantiated by itself
     - This means that it could be used on each page rather than just one
-    
+
+Commonalities
+    - When objects have things in common, just like the pages, we call them base attributes or base properties
+
+Virtual 
+    - The Virtual keyword means that classes that inherit this class can override them to give them new functionality or new values
+
+Override
+    - When a class inherits from another class and the members names are the same
+        - The inheriting class needs to override the inherited class using the override keyword
+
