@@ -118,4 +118,15 @@ Test Filter Flag
     - When running dotnet tests there can be filters passed in for example a category
         - dotnet test --filter testcategory=cards
     - This will not work when using the same driver across all tests
-    
+
+!!! Driver
+    - Tests cannot run in parallel due to sharing the instance of the WebDriver
+    - This could be fixed by instantiating a new WebDriver within each test, rather than declaring it at the top of our class
+        - There are however side effects to this approach
+    - Creating a static or global WebDriver will not work either
+        - This will not allow tests to be ran in parallel
+    - The solution is to use a ThreadStatic attribute
+        - https://www.xspdf.com/resolution/58492696.html
+        - Each executing thread will have a separate instance of the field, and independently sets and gets values for that field
+        - https://docs.microsoft.com/en-us/dotnet/api/system.threadstaticattribute?view=net-5.0
+    -
