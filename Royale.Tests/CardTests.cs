@@ -5,6 +5,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Royale.Pages;
 using Framework.Models;
+using Framework.Services;
 
 namespace Royale.Tests
 {
@@ -46,6 +47,7 @@ namespace Royale.Tests
 
         }
 
+        [Test]
         public void Ice_Spirit_headers_are_correct_on_Card_Details_Page()
         {
 
@@ -63,19 +65,22 @@ namespace Royale.Tests
 
         }
 
+        [Test]
+        [TestCase("Ice Spirit")]
+        [TestCase("Mirror")]
         public void Mirror_headers_are_correct_on_Card_Details_Page()
         {
 
             new CardsPage(driver).GoTo().GetCardByName("Mirror").Click();
             var cardDetails = new CardDetailsPage(driver);
 
-            var card = cardDetails.GetBaseCard();
-            var mirror = new MirrorCard();
+            var cardOnPage = cardDetails.GetBaseCard();
+            var mirror = new InMemoryCardService().GetCardByName("Mirror");
 
-            Assert.AreEqual(mirror.Name, card.Name);
-            Assert.AreEqual(mirror.Type, card.Type);
-            Assert.AreEqual(mirror.Arena, card.Arena);
-            Assert.AreEqual(mirror.Rarity, card.Rarity);
+            Assert.AreEqual(mirror.Name, cardOnPage.Name);
+            Assert.AreEqual(mirror.Type, cardOnPage.Type);
+            Assert.AreEqual(mirror.Arena, cardOnPage.Arena);
+            Assert.AreEqual(mirror.Rarity, cardOnPage.Rarity);
 
         }
 
