@@ -104,4 +104,18 @@ Last
 Interfaces
     - Interfaces are rules or contracts that must be followed by any class that implements them
     - This can be very powerful to use as it guarantees that multiple classes will have the same method name or signatures
+
+NUnit - [TestCaseSource]
+    - https://docs.nunit.org/articles/nunit/writing-tests/attributes/testcasesource.html
+    - This  is used on a parameterized test method to identify the source from which the required arguments will be provided
+    - The data is kept separate from the test itself and may be used by multiple test methods
+
+NUnit - [Parallelizable]
+    - We can greatly improve our test run time by running our tests in parallel
+    - https://docs.nunit.org/articles/nunit/technical-notes/usage/Framework-Parallel-Test-Execution.html
+
+Test Filter Flag
+    - When running dotnet tests there can be filters passed in for example a category
+        - dotnet test --filter testcategory=cards
+    - This will not work when using the same driver across all tests
     

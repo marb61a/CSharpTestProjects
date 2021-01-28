@@ -65,22 +65,24 @@ namespace Royale.Tests
 
         }
 
-        [Test]
-        [TestCase("Ice Spirit")]
-        [TestCase("Mirror")]
-        public void Mirror_headers_are_correct_on_Card_Details_Page()
+        static string[] cardNames = { "Ice Spirit", "Mirror" };
+
+        [Test, Category("cards")]
+        [TestCaseSource("cardNames")]
+        [Parallelizable(ParallelScope.Children)]
+        public void Mirror_headers_are_correct_on_Card_Details_Page(string cardName)
         {
 
-            new CardsPage(driver).GoTo().GetCardByName("Mirror").Click();
+            new CardsPage(driver).GoTo().GetCardByName(cardName).Click();
             var cardDetails = new CardDetailsPage(driver);
 
             var cardOnPage = cardDetails.GetBaseCard();
-            var mirror = new InMemoryCardService().GetCardByName("Mirror");
+            var card = new InMemoryCardService().GetCardByName(cardName);
 
-            Assert.AreEqual(mirror.Name, cardOnPage.Name);
-            Assert.AreEqual(mirror.Type, cardOnPage.Type);
-            Assert.AreEqual(mirror.Arena, cardOnPage.Arena);
-            Assert.AreEqual(mirror.Rarity, cardOnPage.Rarity);
+            Assert.AreEqual(card.Name, cardOnPage.Name);
+            Assert.AreEqual(card.Type, cardOnPage.Type);
+            Assert.AreEqual(card.Arena, cardOnPage.Arena);
+            Assert.AreEqual(card.Rarity, cardOnPage.Rarity);
 
         }
 
