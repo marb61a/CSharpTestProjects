@@ -4,6 +4,7 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Royale.Pages;
+using Framework.Models;
 
 namespace Royale.Tests
 {
@@ -67,15 +68,14 @@ namespace Royale.Tests
 
             new CardsPage(driver).GoTo().GetCardByName("Mirror").Click();
             var cardDetails = new CardDetailsPage(driver);
-            
-            var (category, arena) = cardDetails.GetCardCategory();
-            var cardName = cardDetails.Map.CardName.Text;
-            var cardRarity = cardDetails.Map.CardRarity.Text.Split('\n').Last();
 
-            Assert.AreEqual("Mirror", cardName);
-            Assert.AreEqual("spell", category);
-            Assert.AreEqual("Arena 12", arena);
-            Assert.AreEqual("Epic", cardRarity);
+            var card = cardDetails.GetBaseCard();
+            var mirror = new MirrorCard();
+
+            Assert.AreEqual(mirror.Name, card.Name);
+            Assert.AreEqual(mirror.Type, card.Type);
+            Assert.AreEqual(mirror.Arena, card.Arena);
+            Assert.AreEqual(mirror.Rarity, card.Rarity);
 
         }
 

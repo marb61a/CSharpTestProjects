@@ -98,3 +98,10 @@ Override
     - When a class inherits from another class and the members names are the same
         - The inheriting class needs to override the inherited class using the override keyword
 
+Last
+    - When using the Last method have a using System.Linq in the file
+
+Interfaces
+    - Interfaces are rules or contracts that must be followed by any class that implements them
+    - This can be very powerful to use as it guarantees that multiple classes will have the same method name or signatures
+    
