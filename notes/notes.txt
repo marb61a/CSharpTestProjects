@@ -129,4 +129,8 @@ Test Filter Flag
         - https://www.xspdf.com/resolution/58492696.html
         - Each executing thread will have a separate instance of the field, and independently sets and gets values for that field
         - https://docs.microsoft.com/en-us/dotnet/api/system.threadstaticattribute?view=net-5.0
-    -
+
+?? Operator in C#
+    - This is what is called the null coalescing operator
+    - https://docs.microsoft.com/en-in/dotnet/csharp/language-reference/operators/null-coalescing-operator
+    

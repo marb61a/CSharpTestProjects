@@ -13,8 +13,8 @@ namespace Royale.Pages
 
         public static void Init()
         {
-            Cards = new CardsPage();
-            CardDetails = new CardDetailsPage();
+            Cards = new CardsPage(Driver.Current);
+            CardDetails = new CardDetailsPage(Driver.Current);
         }
         
     }

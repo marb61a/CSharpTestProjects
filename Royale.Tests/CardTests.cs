@@ -8,12 +8,10 @@ using Framework.Models;
 using Framework.Services;
 using Framework.Selenium;
 
-namespace Royale.Tests
+namespace Tests
 {
     public class CardTests
     {
-        IWebDriver driver;
-
         [SetUp]
         public void BeforeEach()
         {
@@ -40,8 +38,7 @@ namespace Royale.Tests
         {
             // Click the cards link in the header
             // driver.FindElement(By.CssSelector("a[href='/cards']")).Click();
-            var cardsPage = new CardsPage(Driver.Current);
-            var iceSpirit = cardsPage.GoTo().GetCardByName("Ice Spirit");
+            var iceSpirit = Pages.Cards.GoTo().GetCardByName("Ice Spirit");
 
             // Assert Ice Spirit is displayed
             Assert.That(iceSpirit.Displayed);
@@ -53,13 +50,11 @@ namespace Royale.Tests
         [Test, Category("cards")]
         [TestCaseSource("cardNames")]
         [Parallelizable(ParallelScope.Children)]
-        public void Mirror_headers_are_correct_on_Card_Details_Page(string cardName)
+        public void Card_headers_are_correct_on_Card_Details_Page(string cardName)
         {
+            Pages.Cards.GoTo().GetCardByName(cardName).Click();
 
-            new CardsPage(Driver.Current).GoTo().GetCardByName(cardName).Click();
-            var cardDetails = new CardDetailsPage(Driver.Current);
-
-            var cardOnPage = cardDetails.GetBaseCard();
+            var cardOnPage = Pages.CardDetails.GetBaseCard();
             var card = new InMemoryCardService().GetCardByName(cardName);
 
             Assert.AreEqual(card.Name, cardOnPage.Name);
