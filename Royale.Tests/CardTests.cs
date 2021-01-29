@@ -16,12 +16,13 @@ namespace Tests
         public void BeforeEach()
         {
             Driver.Init();
+            Pages.Init();
 
             // Maximize the browser window
             Driver.Current.Manage().Window.Maximize();
 
             // Go to statsroyale.com site
-            Driver.Current.Url = "https://statsroyale.com";
+            Driver.GoTo("https://statsroyale.com");
 
             // Click the accept cookies button on the popup panel
             Driver.Current.FindElement(By.CssSelector("#cmpwelcomebtnyes > a")).Click();
@@ -30,7 +31,7 @@ namespace Tests
 
         public void AfterEach(){
             // Close the browser window
-            Driver.Current.Quit();
+            Driver.Quit();
         }
 
         [Test]

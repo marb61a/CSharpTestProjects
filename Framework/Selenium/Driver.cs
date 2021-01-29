@@ -30,6 +30,16 @@ namespace Framework.Selenium
             Current.Navigate().GoToUrl(url);
         }
 
+        public static IWebElement FindElement(By by)
+        {
+            return Current.FindElement(by);
+        }
+
+        public static IList<IWebElement> FindElements(By by)
+        {
+            return Current.FindElements(by);
+        }
+
         public static void Quit()
         {
             Current.Quit();
