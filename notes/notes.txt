@@ -133,4 +133,24 @@ Test Filter Flag
 ?? Operator in C#
     - This is what is called the null coalescing operator
     - https://docs.microsoft.com/en-in/dotnet/csharp/language-reference/operators/null-coalescing-operator
-    
+
+Adding Packages
+    - This is done with PackSharp
+    - Add a package and choose the folder 
+    - This allows for finding a package using NuGet
+        - NuGet is a package manager for .NET
+        - https://www.nuget.org/
+    - This use the following cli command
+        - dotned add <folder_name> package <package_name>
+
+Newtonsoft JSON
+    - https://www.newtonsoft.com/json
+    - Popular high-performance JSON framework for .NET 
+    - This can serialize and deserialize .NET objects
+
+RestSharp
+    - https://restsharp.dev/
+    - This is a REST API client library for .NET
+
+Deserializing
+    - This is turing a JSON string into a C# object
