@@ -12,7 +12,7 @@ namespace Framework.Services
         public IList<Card> GetAllCards()
         {
             var client = new RestClient(CARDS_API);
-            var request new RestRequest
+            var request = new RestRequest
             {
                 Method = Method.GET,
                 RequestFormat = DataFormat.Json
