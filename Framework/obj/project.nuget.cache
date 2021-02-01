@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "hU5OcD9GOIy7oqeGfi6FjP2HvvgIHwrjyPi/khoPediHds1aeGTx9SrJ09XUwITYgF07rdxKPHpKhB1MZIBlww==",
+  "dgSpecHash": "58B+BHNdOVO2mYctxxXmFgXpJ9zpl6yY5Knn+FC6mXeIOiKm+4jFocxpCwgd7vvuWNwRL/7shaUkG8pqfekWzA==",
   "success": true,
   "projectFilePath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\marb6\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\marb6\\.nuget\\packages\\nunit\\3.13.1\\nunit.3.13.1.nupkg.sha512",
     "C:\\Users\\marb6\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
     "C:\\Users\\marb6\\.nuget\\packages\\selenium.support\\3.141.0\\selenium.support.3.141.0.nupkg.sha512",
     "C:\\Users\\marb6\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512"

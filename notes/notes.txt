@@ -166,4 +166,8 @@ Number of Workers
     - Despite writing a low number of tests (2) using TestCaseSource changes things
     - This is coming from an API with 93 cases
     - This means that there will be 186 tests from a single endpoint with 2 tests
-    
+
+!!! Default filter
+    - Using the dotnet test command the default filter is by name for example
+        - dotnet test --filter user_can_copy_the_deck
+    - 

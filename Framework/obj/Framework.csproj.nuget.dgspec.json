@@ -47,13 +47,17 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "NUnit": {
+              "target": "Package",
+              "version": "[*, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
             },
             "RestSharp": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[106.11.7, )"
             },
             "Selenium.Support": {
               "target": "Package",
