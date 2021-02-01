@@ -154,3 +154,11 @@ RestSharp
 
 Deserializing
     - This is turing a JSON string into a C# object
+
+Number of Workers
+    - NUint allows for adding an argument for the number of workers to be executed at the same time
+    - The command which is case sensitive is as follows
+        - NUnit.NumberOfTestWorkers
+        - dotnet test --filter name=card_is_on_cards_page -- NUnit.NumberOfTestWorkers=4
+        - It is probably an idea to stick to 3 or 4 instead of 20 on a local machine which may not have the power
+    -
