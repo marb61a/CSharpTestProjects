@@ -1,4 +1,5 @@
 using System.IO;
+using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -35,15 +36,16 @@ namespace Tests
             Driver.Quit();
         }
 
-        [Test]
-        public void Ice_Spirit_is_on_Cards_Page()
-        {
-            // Click the cards link in the header
-            // driver.FindElement(By.CssSelector("a[href='/cards']")).Click();
-            var iceSpirit = Pages.Cards.GoTo().GetCardByName("Ice Spirit");
+        static IList<Card> apiCards = new ApiCardService().GetAllCards();
 
-            // Assert Ice Spirit is displayed
-            Assert.That(iceSpirit.Displayed);
+        [Test, Category("cards")]
+        [TestCaseSource("apiCards")]
+        [Parallelizable(ParallelScope.Children)]
+        public void Card_is_on_Cards_Page(Card card)
+        {
+            var cardOnPage = Pages.Cards.GoTo().GetCardByName(card.Name);
+
+            Assert.That(cardOnPage.Displayed);
 
         }
 
@@ -52,17 +54,20 @@ namespace Tests
         [Test, Category("cards")]
         [TestCaseSource("cardNames")]
         [Parallelizable(ParallelScope.Children)]
-        public void Card_headers_are_correct_on_Card_Details_Page(string cardName)
+        public void Card_headers_are_correct_on_Card_Details_Page(Card card)
         {
-            Pages.Cards.GoTo().GetCardByName(cardName).Click();
+            Pages.Cards.GoTo().GetCardByName(card.Name).Click();
 
             var cardOnPage = Pages.CardDetails.GetBaseCard();
-            var card = new InMemoryCardService().GetCardByName(cardName);
+            if(cardOnPage.Type == "troop")
+            {
+                cardOnPage.Type = "character";
+            }
 
             Assert.AreEqual(card.Name, cardOnPage.Name);
-            Assert.AreEqual(card.Type, cardOnPage.Type);
             Assert.AreEqual(card.Arena, cardOnPage.Arena);
             Assert.AreEqual(card.Rarity, cardOnPage.Rarity);
+            Assert.That(card.Type.Contains(cardOnPage.Type));
 
         }
 

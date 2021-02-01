@@ -27,21 +27,20 @@ namespace Tests
         [Test]
         public void User_can_copy_the_deck()
         {
-            // Go to deck builder page
-            Driver.FindElement(By.CssSelector("[href='/deckbuilder']")).Click();
-
-            // Click add card manually
-            Driver.FindElement(By.XPath("//a[text()='add cards manually']")).Click();
-
-            // Click copy deck icon
-            Driver.FindElement(By.CssSelector(".copyButton")).Click();
-
-            // Click Yes
-            Driver.FindElement(By.Id("button-open")).Click();
-
-            // Assert that the "if click yes " message is being displayed
-            var copyMessage = Driver.FindElement(By.CssSelector(".notes.active"));
-            Assert.That(copyMessage.Displayed);
+            Pages.DeckBuilder.GoTo().AddCardsManually();
+            Pages.DeckBuilder.CopySuggestedDeck();
+            Pages.CopyDeck.Yes();
+            Assert.That(Pages.CopyDeck.Map.CopiedMessage.Displayed);
         }
+
+        [Test, Category("copydeck")]
+        public void User_opens_app_store()
+        {
+            Pages.DeckBuilder.GoTo().AddCardsManually();
+            Pages.DeckBuilder.CopySuggestedDeck();
+            Pages.CopyDeck.No().OpenAppStore();
+
+        }
+
     }
 }
