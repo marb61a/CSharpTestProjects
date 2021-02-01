@@ -10,6 +10,7 @@ using Framework.Selenium;
 
 namespace Tests
 {
+    [Parallelizable]
     public class CardTests
     {
         [SetUp]

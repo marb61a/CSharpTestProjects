@@ -161,4 +161,9 @@ Number of Workers
         - NUnit.NumberOfTestWorkers
         - dotnet test --filter name=card_is_on_cards_page -- NUnit.NumberOfTestWorkers=4
         - It is probably an idea to stick to 3 or 4 instead of 20 on a local machine which may not have the power
-    -
+
+!!! Test cases
+    - Despite writing a low number of tests (2) using TestCaseSource changes things
+    - This is coming from an API with 93 cases
+    - This means that there will be 186 tests from a single endpoint with 2 tests
+    
