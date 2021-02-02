@@ -170,4 +170,27 @@ Number of Workers
 !!! Default filter
     - Using the dotnet test command the default filter is by name for example
         - dotnet test --filter user_can_copy_the_deck
-    - 
+
+!!! Default webdriverwait timeout
+    - The default timeout is 500 milliseconds. (Inherited from DefaultWait<T>.)
+    - https://www.selenium.dev/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_WebDriverWait.htm
+
+Recursive
+    - When setting recursive to true this will not only delete the directory but all of the subdirectories and files within it as well
+
+Creating A directory use the following
+    - Directory.CreateDirectory
+    - This takes the necessary path passed in as a parameter
+
+Writing 
+    - Write a new line to a file using File.AppendText
+    - WriteLine and Write are similar but Write will instead of making a brand-new line and then writing the text to it
+        - It will append on the line that it is currently on
+
+Logging
+    - There are different types of logging to be considered
+        - Logging as a step, as an informational message, as a warning, an error and logging a fatal break
+
+NUnit
+    - https://nunit.org/
+    
