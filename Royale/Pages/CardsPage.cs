@@ -17,7 +17,7 @@ namespace Royale.Pages
             HeaderNav.GoToCardsPage();
             return this;
         }
-        public IWebElement GetCardByName(string cardName)
+        public Element GetCardByName(string cardName)
         {
             // Some cards have single names eg golem others such as Ice Spirit have more
             // Ice Spirit should become Ice+Spirit
@@ -33,6 +33,6 @@ namespace Royale.Pages
     public class CardsPageMap
     {
         // Can get any card
-        public Element Card(string name) => Driver.FindElement(By.CssSelector($"a[href*='{name}']"), $"Card: {name}");
+         public Element Card(string name) => Driver.FindElement(By.CssSelector($"a[href*='{name}']"), $"Card: {name}");
     }
 }

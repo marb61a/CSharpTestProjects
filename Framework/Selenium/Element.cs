@@ -39,6 +39,42 @@ namespace Framework.Selenium
             Current.Click();
         }
 
+        public IWebElement FindElement(By by)
+        {
+            return Current.FindElement(by);
+        }
+
+        public ReadOnlyCollection<IWebElement> FindElements(By by)
+        {
+            return Current.FindElements(by);
+        }
+
+        public string GetAttribute(string attributeName)
+        {
+            return Current.GetAttribute(attributeName);
+        }
+
+        public string GetCssValue(string propertyName)
+        {
+            return Current.GetCssValue(propertyName);
+        }
+
+        public string GetProperty(string propertyName)
+        {
+            return Current.GetProperty(propertyName);
+        }
+
+        public void Hover()
+        {
+            var actions = new Actions(Driver.Current);
+            actions.MoveToElement(Current).Perform();
+        }
+
+        public void SendKeys(string text)
+        {
+            Current.SendKeys(text);
+        }
+
         public void Submit()
         {
             Current.Submit();
