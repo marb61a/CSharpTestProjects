@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using OpenQA.Selenium;
 using Framework.Selenium;
@@ -14,19 +15,31 @@ namespace Royale.Pages
             Map = new CardDetailsPageMap();
         }
 
-        public (string Category, string Arena) GetCardCategory()
+        public (string Type, int Arena) GetCardCategory()
         {
             var categories = Map.CardCategory.Text.Split(',');
-            return (categories[0].Trim(), categories[1].Trim());
+            var type = categories[0].ToLower();
+            var arena = categories[1].Trim().Split(' ').Last();
+            
+            int intArena;
+            if(int.TryParse(arena, out intArena))
+            {
+                return (type, intArena);
+            }
+            else
+            {
+                return (type, 0);
+            }
         }
 
         public Card GetBaseCard(){
-            var (category, arena) = GetCardCategory();
+            var (type, arena) = GetCardCategory();
+
             return new Card
             {
                 Name = Map.CardName.Text,
                 Rarity = Map.CardRarity.Text.Split('\n').Last(),
-                Type = category,
+                Type = type,
                 Arena = arena
             };
         }
@@ -34,8 +47,8 @@ namespace Royale.Pages
 
     public class CardDetailsPageMap 
     {
-         public IWebElement CardName => Driver.FindElement(By.CssSelector("div[class*=cardName]"));
-         public IWebElement CardCategory => Driver.FindElement(By.CssSelector("div[class*='card__rarity']"));
-         public IWebElement CardRarity => Driver.FindElement(By.CssSelector("div[class*='rarityCaption']"));
+         public Element CardName => Driver.FindElement(By.CssSelector("div[class*=cardName]"), "Card Name");
+         public Element CardCategory => Driver.FindElement(By.CssSelector("div[class*='card__rarity']"), "Card Category");
+         public Element CardRarity => Driver.FindElement(By.CssSelector("div[class*='rarityCaption']"), "Card Rarity");
     }
 }

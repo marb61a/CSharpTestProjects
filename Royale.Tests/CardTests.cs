@@ -5,6 +5,7 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Royale.Pages;
+using Framework;
 using Framework.Models;
 using Framework.Services;
 using Framework.Selenium;
@@ -14,9 +15,16 @@ namespace Tests
     [Parallelizable]
     public class CardTests
     {
+        [OneTimeSetUp]
+        public void BeforeAll()
+        {
+            FW.CreateTestResultsDirectory();
+        }
+
         [SetUp]
         public void BeforeEach()
         {
+            FW.SetLogger();
             Driver.Init();
             Pages.Init();
 
@@ -32,7 +40,6 @@ namespace Tests
         }
 
         public void AfterEach(){
-            // Close the browser window
             Driver.Quit();
         }
 
@@ -48,8 +55,6 @@ namespace Tests
             Assert.That(cardOnPage.Displayed);
 
         }
-
-        static string[] cardNames = { "Ice Spirit", "Mirror" };
 
         [Test, Category("cards")]
         [TestCaseSource("cardNames")]
