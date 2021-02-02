@@ -41,7 +41,7 @@ namespace Royale.Pages
                 Name = Map.CardName.Text,
                 Rarity = Map.CardRarity.Text.Split('\n').Last(),
                 Type = type,
-                Arena = arena
+                Arena = arena.ToString()
             };
         }
     }
