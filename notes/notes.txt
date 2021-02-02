@@ -193,4 +193,20 @@ Logging
 
 NUnit
     - https://nunit.org/
-    
+
+Current Test 
+    - A current running test is equal to TestContext.CurrentContext.Test.Name
+
+OneTimeSetUp
+    - https://docs.nunit.org/articles/nunit/writing-tests/attributes/onetimesetup.html
+    - This attribute is to identify methods that are called once prior to executing any of the tests in a fixture
+
+Race Conditions
+    - It is defined as anomalous behavior due to unexpected critical dependence on the relative timing of events
+    - This is a way of saying that 2 or more things are trying to work with the same data at the same time
+    - Bugs in race conditions are pretty hard to find
+
+Lock
+    - A Lock is a mechanism that forces the workers to wait in line until the current worker exits the Lock
+    - This resolves race conditions
+

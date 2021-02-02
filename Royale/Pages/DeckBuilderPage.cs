@@ -24,6 +24,7 @@ namespace Royale.Pages
         public void AddCardsManually()
         {
             FW.Log.Step("Click Add Cards Manually link");
+            Driver.Wait.Until(drvr => Map.AddCardsManuallyLink.Displayed);
             Map.AddCardsManuallyLink.Click();
             Driver.Wait.Until(drvr => Map.CopyDeckIcon.Displayed);
         }
@@ -37,8 +38,8 @@ namespace Royale.Pages
 
     public class DeckBuilderPageMap
     {
-        public IWebElement AddCardsManuallyLink => Driver.FindElement(By.CssSelector(""));
-        public IWebElement CopyDeckIcon => Driver.FindElement(By.XPath("//a[text()='add cards manually']"));
+        public Element AddCardsManuallyLink => Driver.FindElement(By.XPath("//a[text()='add cards manually']"), "Add Cards Manually Link");
+        public Element CopyDeckIcon => Driver.FindElement(By.CssSelector(".copyButton"), "Copy Deck Button");
     }
 
 }

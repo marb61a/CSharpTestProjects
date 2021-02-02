@@ -32,7 +32,8 @@ namespace Royale.Pages
             }
         }
 
-        public Card GetBaseCard(){
+        public Card GetBaseCard()
+        {
             var (type, arena) = GetCardCategory();
 
             return new Card
@@ -47,7 +48,7 @@ namespace Royale.Pages
 
     public class CardDetailsPageMap 
     {
-         public Element CardName => Driver.FindElement(By.CssSelector("div[class*=cardName]"), "Card Name");
+         public Element CardName => Driver.FindElement(By.CssSelector("div[class*='cardName']"), "Card Name");
          public Element CardCategory => Driver.FindElement(By.CssSelector("div[class*='card__rarity']"), "Card Category");
          public Element CardRarity => Driver.FindElement(By.CssSelector("div[class*='rarityCaption']"), "Card Rarity");
     }
