@@ -28,7 +28,7 @@ namespace Framework
             return Directory.CreateDirectory(testDirectory);
         }
 
-        public static void setLogger()
+        public static void SetLogger()
         {
             lock(_setLoggerLock)
             {

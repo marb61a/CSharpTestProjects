@@ -1,6 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 using Framework.Selenium;
+using Framework;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
@@ -10,9 +11,16 @@ namespace Tests
 {
     public class CopyDeckTests
     {
+        [OneTimeSetUp]
+        public void BeforeAll()
+        {
+            FW.CreateTestResultsDirectory();
+        }
+
         [SetUp]
         public void BeforeEach()
         {
+            FW.SetLogger();
             Driver.Init();
             Pages.Init();
             Driver.GoTo("https://statsroyale.com");
@@ -24,7 +32,7 @@ namespace Tests
             Driver.Quit();
         }
 
-        [Test]
+        [Test, Category("copydeck")]
         public void User_can_copy_the_deck()
         {
             Pages.DeckBuilder.GoTo().AddCardsManually();
@@ -40,6 +48,20 @@ namespace Tests
             Pages.DeckBuilder.CopySuggestedDeck();
             Pages.CopyDeck.No().OpenAppStore();
 
+            // Removes the Unicode character `\u0200e` by "replacing" it with empty
+            var title = Regex.Replace(Driver.Title, @"\u0200e", string.Empty);
+
+            Assert.That(title, Is.EqualTo("‎Clash Royale on the App Store"));
+
+        }
+
+        [Test, Category("copydeck")]
+        public void User_opens_google_play()
+        {
+            Pages.DeckBuilder.GoTo().AddCardsManually();
+            Pages.DeckBuilder.CopySuggestedDeck();
+            Pages.CopyDeck.No().OpenGooglePlay();
+            Assert.AreEqual("Clash Royale - Apps on Google Play", Driver.Title);
         }
 
     }
