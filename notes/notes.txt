@@ -218,4 +218,10 @@ Shortcut
     - To add properties use the following Shortcut
     - Type prop and hit tab (In some editors twice)
     - Typing propfull will generate full property
+
+Maximising Windows
+    - There are different ways of maximising a Window
+    - One option is to pass a --start-maximized argument to the Driver Options
+    - There is another way which is to call Driver.Manage().Window.Maximize()
+    - The issue is that those methods may not work for Mac or Linux
     

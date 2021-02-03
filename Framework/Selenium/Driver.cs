@@ -19,9 +19,7 @@ namespace Framework.Selenium
         {
             FW.Log.Info("Browser: Chrome");
             _driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"));
-            _driver.Manage().Window.Maximize();
             Wait = new Wait(10);
-            // _driver.FindElement(By.CssSelector("#cmpwelcomebtnyes > a")).Click();
         }
 
         public static IWebDriver Current => _driver ?? throw new NullReferenceException("_driver is null");
@@ -35,7 +33,6 @@ namespace Framework.Selenium
                 url = $"http://{url}";
             }
 
-            // Debug.WriteLine(url);
             FW.Log.Info(url);
             Current.Navigate().GoToUrl(url);
         }
@@ -54,6 +51,13 @@ namespace Framework.Selenium
             {
                 FoundBy = by
             };
+        }
+
+        public static void TakeScreenshot(string imageName)
+        {
+            var ss = ((ITakesScreenshot)Current).GetScreenshot();
+            var ssFileName = Path.Combine(FW.CurrentTestDirectory.FullName, imageName);
+            ss.SaveAsFile($"{ssFileName}.png", ScreenshotImageFormat.Png);
         }
 
         public static void Quit()
