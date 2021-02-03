@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "58B+BHNdOVO2mYctxxXmFgXpJ9zpl6yY5Knn+FC6mXeIOiKm+4jFocxpCwgd7vvuWNwRL/7shaUkG8pqfekWzA==",
+  "dgSpecHash": "ykjwbAzTD4t86Qc72jKkfwajVrVz6aq2UT2CUDKAYOuKimMURsh7Db/ewQJORCaGwNxxz0L/JuYM/6hLUMbxiA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
+  "projectFilePath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

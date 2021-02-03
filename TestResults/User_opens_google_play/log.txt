@@ -1,0 +1,4 @@
+Starting Timestamp : 03/02/2021 11:28:17
+Test: User_opens_google_play
+[INFO]: Browser: Chrome
+[INFO]: Close Browser

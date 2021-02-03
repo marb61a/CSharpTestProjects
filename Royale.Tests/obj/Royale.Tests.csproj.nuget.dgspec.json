@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj": {}
+    "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj": {}
   },
   "projects": {
-    "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj": {
+    "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
+        "projectUniqueName": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
         "projectName": "Framework",
-        "projectPath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
+        "projectPath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
         "packagesPath": "C:\\Users\\marb6\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\obj\\",
+        "outputPath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -82,14 +82,14 @@
         }
       }
     },
-    "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj": {
+    "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
         "projectName": "Royale.Tests",
-        "projectPath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
+        "projectPath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
         "packagesPath": "C:\\Users\\marb6\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\obj\\",
+        "outputPath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -108,8 +108,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale\\Royale.csproj": {
-                "projectPath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale\\Royale.csproj"
+              "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale\\Royale.csproj": {
+                "projectPath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale\\Royale.csproj"
               }
             }
           }
@@ -129,7 +129,7 @@
             },
             "NUnit": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[3.13.1, )"
             },
             "NUnit3TestAdapter": {
               "target": "Package",
@@ -155,14 +155,14 @@
         }
       }
     },
-    "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale\\Royale.csproj": {
+    "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale\\Royale.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale\\Royale.csproj",
+        "projectUniqueName": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale\\Royale.csproj",
         "projectName": "Royale",
-        "projectPath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale\\Royale.csproj",
+        "projectPath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale\\Royale.csproj",
         "packagesPath": "C:\\Users\\marb6\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale\\obj\\",
+        "outputPath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -181,8 +181,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj": {
-                "projectPath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj"
+              "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj": {
+                "projectPath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj"
               }
             }
           }

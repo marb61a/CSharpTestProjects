@@ -1,0 +1,4 @@
+Starting Timestamp : 03/02/2021 11:28:12
+Test: User_can_copy_the_deck
+[INFO]: Browser: Chrome
+[INFO]: Close Browser

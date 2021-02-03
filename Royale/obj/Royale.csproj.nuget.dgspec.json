@@ -47,6 +47,18 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.11.7, )"
+            },
             "Selenium.Support": {
               "target": "Package",
               "version": "[3.141.0, )"

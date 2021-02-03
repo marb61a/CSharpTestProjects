@@ -1,0 +1,3 @@
+Starting Timestamp : 03/02/2021 11:28:24
+Test: Card_is_on_Cards_Page(Framework.Models.Card)
+[INFO]: Browser: Chrome
