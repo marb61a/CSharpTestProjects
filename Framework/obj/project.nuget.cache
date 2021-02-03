@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "huTC2rKiLh+gG071yIRqoW2QdJC/ZGScOgs3e9cyfs3fabcGKDiVqPheV/ohBtjzbTrU19iO53dNSbwC7uR/jA==",
+  "dgSpecHash": "7YBENLnsOF20EvAxf5sDCguwc6ow8LiDkOTajVhgBGfM5tVjtS87+rw77Y8AXIQJuHcxaYIY5rNJRhuoEnoKZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
+  "projectFilePath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\marb6\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "C:\\Users\\marb6\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
