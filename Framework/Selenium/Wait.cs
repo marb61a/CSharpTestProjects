@@ -12,7 +12,7 @@ namespace Framework.Selenium
         {
             _wait = new WebDriverWait(Driver.Current, TimeSpan.FromSeconds(waitSeconds))
             {
-                PollingInterval = TimeSpan.FromMilliseconds(500)
+                PollingInterval = TimeSpan.FromMilliseconds(2500)
             };
 
             _wait.IgnoreExceptionTypes(

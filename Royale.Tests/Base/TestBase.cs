@@ -21,13 +21,29 @@ namespace Tests.Base
             FW.SetLogger();
             Driver.Init();
             Pages.Init();
-
-            // Maximize the browser window
-            // Driver.Current.Manage().Window.Maximize();
             Driver.GoTo(FW.Config.Test.Url);
 
-            // Click the accept cookies button on the popup panel
-            // Driver.Current.FindElement(By.CssSelector("#cmpwelcomebtnyes > a")).Click();
+        }
+
+        [TearDown]
+        public virtual void AfterEach()
+        {
+            var outcome = TestContext.CurrentContext.Result.Outcome.Status;
+            if(outcome == TestStatus.Passed)
+            {
+                FW.Log.Info("Outcome: Passed");
+            }
+            else if (outcome == TestStatus.Failed)
+            {
+                Driver.TakeScreenshot("test_failed");
+                FW.Log.Info("Outcome: Failed");
+            }
+            else
+            {
+                FW.Log.Warning("Outcome: " + outcome);
+            }
+
+            Driver.Quit();
         }
     }
 }

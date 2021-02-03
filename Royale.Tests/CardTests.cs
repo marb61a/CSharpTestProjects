@@ -9,40 +9,12 @@ using Framework;
 using Framework.Models;
 using Framework.Services;
 using Framework.Selenium;
+using Tests.Base;
 
 namespace Tests
 {
-    [Parallelizable]
-    public class CardTests
+    public class CardTests : TestBase
     {
-        [OneTimeSetUp]
-        public void BeforeAll()
-        {
-            FW.CreateTestResultsDirectory();
-        }
-
-        [SetUp]
-        public void BeforeEach()
-        {
-            FW.SetLogger();
-            Driver.Init();
-            Pages.Init();
-
-            // Maximize the browser window
-            Driver.Current.Manage().Window.Maximize();
-
-            // Go to statsroyale.com site
-            Driver.GoTo("https://statsroyale.com");
-
-            // Click the accept cookies button on the popup panel
-            Driver.Current.FindElement(By.CssSelector("#cmpwelcomebtnyes > a")).Click();
-            
-        }
-
-        public void AfterEach(){
-            Driver.Quit();
-        }
-
         static IList<Card> apiCards = new ApiCardService().GetAllCards();
 
         [Test, Category("cards")]
@@ -57,7 +29,7 @@ namespace Tests
         }
 
         [Test, Category("cards")]
-        [TestCaseSource("cardNames")]
+        [TestCaseSource("apiCards")]
         [Parallelizable(ParallelScope.Children)]
         public void Card_headers_are_correct_on_Card_Details_Page(Card card)
         {
@@ -75,6 +47,5 @@ namespace Tests
             Assert.That(card.Type.Contains(cardOnPage.Type));
 
         }
-
     }
 }
