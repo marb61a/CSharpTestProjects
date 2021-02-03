@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -10,16 +8,20 @@ namespace Framework.Selenium
     public static class Driver 
     {
         [ThreadStatic]
-        public static IWebDriver _driver;
+        private static IWebDriver _driver;
 
         [ThreadStatic]
         public static Wait Wait;
 
+        [ThreadStatic]
+        public static Window Window;
+
         public static void Init()
         {
-            FW.Log.Info("Browser: Chrome");
-            _driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"));
-            Wait = new Wait(10);
+            _driver = DriverFactory.Build(FW.Config.Driver.Browser);
+            Wait = new Wait(FW.Config.Driver.WaitSeconds);
+            Window = new Window();
+            Window.Maximize();
         }
 
         public static IWebDriver Current => _driver ?? throw new NullReferenceException("_driver is null");

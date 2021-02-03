@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Drawing;
 using OpenQA.Selenium;
 
-namespace Framework
+namespace Framework.Selenium
 {
     public class Window
     {
@@ -18,13 +18,21 @@ namespace Framework
         {
             get 
             {
-                
+                var js = "return [window.screen.availWidth, window.screen.availHeight];";
+                var jse = (IJavaScriptExecutor)Driver.Current;
+
+                dynamic dimensions = jse.ExecuteScript(js, null);
+                var x = Convert.ToInt32(dimensions[0]);
+                var y = Convert.ToInt32(dimensions[1]);
+
+                return new Size(x, y);
             }
         }
 
         public void Maximize()
         {
-
+            Driver.Current.Manage().Window.Position = new Point(0, 0);
+            Driver.Current.Manage().Window.Size = ScreenSize;
         }
     }
 }
