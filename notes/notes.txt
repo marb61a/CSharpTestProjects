@@ -210,3 +210,12 @@ Lock
     - A Lock is a mechanism that forces the workers to wait in line until the current worker exits the Lock
     - This resolves race conditions
 
+Config
+    - Having a config file, that is essentially your settings file
+    - This will not only centralize these options but make it very easy to make change which effect all test suites
+
+Shortcut
+    - To add properties use the following Shortcut
+    - Type prop and hit tab (In some editors twice)
+    - Typing propfull will generate full property
+    
