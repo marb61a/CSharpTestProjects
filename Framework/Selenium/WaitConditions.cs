@@ -53,5 +53,16 @@ namespace Framework.Selenium
 
             return condition;
         }
+
+        public static Func<IWebDriver, Elements> ElementsNotEmpty(Elements elements)
+        {
+            Elements condition(IWebDriver driver)
+            {
+                 Elements _elements = Driver.FindElements(elements.FoundBy);
+                return _elements.IsEmpty ? null : _elements;
+            }
+
+            return condition;
+        }
     }
 }
