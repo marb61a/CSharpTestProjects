@@ -52,7 +52,7 @@ namespace Royale.Pages
         public Element NoButton => Driver.FindElement(By.Id("not-installed"), "No Button");
         public Element AppStoreButton => Driver.FindElement(By.XPath("//a[text()='App Store']"), "App Store Button");
         public Element GooglePlayButton => Driver.FindElement(By.XPath("//a[text()='Google Play']"), "Google Play Button");
-        public Element AcceptCookiesButton => Driver.FindElement(By.CssSelector("a.cc-btn.cc-dismiss"), "Accept Cookies Button");
+        public Element AcceptCookiesButton => Driver.FindElement(By.CssSelector("#cmpwelcomebtnno"), "Accept Cookies Button");
         public Element OtherStoresButton => Driver.FindElement(By.Id("other-stores"), "Other Stores Button");
     }    
 }

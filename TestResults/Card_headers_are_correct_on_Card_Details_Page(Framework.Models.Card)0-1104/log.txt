@@ -1,8 +1,8 @@
-Starting Timestamp : 04/02/2021 12:24:51
+Starting Timestamp : 04/02/2021 18:31:38
 Test: Card_headers_are_correct_on_Card_Details_Page(Framework.Models.Card)
 [INFO]: Browser: chrome
 [INFO]: http://statsroyale.com
     [STEP]: Click Cards Link
-    [STEP]: Click Card: P.E.K.K.A
-[INFO]: Outcome: Passed
+    [STEP]: Click Card: Royal+Hogs
+[INFO]: Outcome: Failed
 [INFO]: Close Browser

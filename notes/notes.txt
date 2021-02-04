@@ -224,4 +224,18 @@ Maximising Windows
     - One option is to pass a --start-maximized argument to the Driver Options
     - There is another way which is to call Driver.Manage().Window.Maximize()
     - The issue is that those methods may not work for Mac or Linux
+
+Passing or Failing Tests
+    - This will use the TestContext from NUnit
+    - The full path is TestContext.CurrentContext.Result.Outcome.Status.
+    - This will tell whether a test has passed or failed
+    - This is used with TestStatus and can be .Passed effect
+
+Screenshots
+    - Uses the ITakesScreenshot Interface then Current for the driver
+    - There needs to be a path to save the image file
+
+WaitHelpers.ExpectedCondtions
+    - This is a package form DotNetSeleniumExtras
+    - ExpectedConditions in OpenQA.Selenium.Support.UI is deprecated so is not to be used
     
