@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj": {}
+    "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj": {}
   },
   "projects": {
-    "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj": {
+    "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
+        "projectUniqueName": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
         "projectName": "Framework",
-        "projectPath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
+        "projectPath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\Framework.csproj",
         "packagesPath": "C:\\Users\\marb6\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\obj\\",
+        "outputPath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Framework\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,7 +43,7 @@
           "dependencies": {
             "DotNetSeleniumExtras.WaitHelpers": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[3.11.0, )"
             },
             "Microsoft.CSharp": {
               "target": "Package",

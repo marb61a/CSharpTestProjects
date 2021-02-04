@@ -12,7 +12,8 @@ namespace Royale.Pages
         {
             Map = new HeaderNavMap();
         }
-        public void GoToCardsPage(){
+        public void GoToCardsPage()
+        {
             Map.CardsTabLink.Click();
         }
     }

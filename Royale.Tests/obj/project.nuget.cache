@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "N1sDLV4JW0TYGXrJSUJSFixiFJnLFIlkLoT6Ph7FehCtVyaAwzFG9IcfAuEq5qIhxnIvjdNhI/1wTNI5h5otUA==",
+  "dgSpecHash": "riUkEuO57rH4kJLwk8VjmEiWTePATpfxEnxxFf8e8tSGBLhXi2QzrwVGovVkdyOdGxh7t5Ab4e9RMJN1H0IcQg==",
   "success": true,
   "projectFilePath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale.Tests\\Royale.Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\marb6\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "C:\\Users\\marb6\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\marb6\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\marb6\\.nuget\\packages\\microsoft.dotnet.internalabstractions\\1.0.0\\microsoft.dotnet.internalabstractions.1.0.0.nupkg.sha512",

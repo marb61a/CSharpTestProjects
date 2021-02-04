@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "67whLFnKO0LcqcqJ8/0cD7LcT1vuKhrtWTiPoHnQpzn6ip/mEGPKaT9T6c/r5Y+fcDdutSJh6e3erDG6zjQs4w==",
+  "dgSpecHash": "BziNGeEe5UeujAJrtFTdZrv8y4FAPUQ0n+gV/jVZglPDCb5/E7Io+6VzyUztvsdafFiwllJoXSa6NQ/xWaCqww==",
   "success": true,
   "projectFilePath": "C:\\Users\\marb6\\OneDrive\\Documents\\CSharpTestProjects\\Royale\\Royale.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\marb6\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "C:\\Users\\marb6\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

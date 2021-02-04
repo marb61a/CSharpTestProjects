@@ -19,8 +19,6 @@ namespace Royale.Pages
         }
         public Element GetCardByName(string cardName)
         {
-            // Some cards have single names eg golem others such as Ice Spirit have more
-            // Ice Spirit should become Ice+Spirit
             if(cardName.Contains(" "))
             {
                 cardName = cardName.Replace(" ", "+");
