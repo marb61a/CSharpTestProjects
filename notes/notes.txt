@@ -41,8 +41,8 @@ Comparing Variables
     - They way to solve this is to use a Text directive at the end of a driver.FindElement  ie -> .Text;
 
 Scripting Problems
-    - Scripting without optimisation straegies has several issues
-    - Some of these are -> Repetition, Lack of Maintainability, Readibility issues
+    - Scripting without optimisation strategies has several issues
+    - Some of these are -> Repetition, Lack of Maintainability, Readability issues
     - These can be solved using what is called the Page Object Model
 
 !!! Test Issues
@@ -65,7 +65,7 @@ Page Object Model
 
 !!! When restore references does not show
     - This can happen after running dotnet build
-    - Check the csproj files to ensure that there is a refernce to the csproj file on which the project depends
+    - Check the csproj files to ensure that there is a reference to the csproj file on which the project depends
     - This is similar to inheritance in OOP
     - In the the projects being put together the dependencies are as follows
         - Framework -> Royale -> Royale.Tests
@@ -141,7 +141,7 @@ Adding Packages
         - NuGet is a package manager for .NET
         - https://www.nuget.org/
     - This use the following cli command
-        - dotned add <folder_name> package <package_name>
+        - dotnet add <folder_name> package <package_name>
 
 Newtonsoft JSON
     - https://www.newtonsoft.com/json
@@ -153,7 +153,7 @@ RestSharp
     - This is a REST API client library for .NET
 
 Deserializing
-    - This is turing a JSON string into a C# object
+    - This is turning a JSON string into a C# object
 
 Number of Workers
     - NUint allows for adding an argument for the number of workers to be executed at the same time
@@ -202,7 +202,7 @@ OneTimeSetUp
     - This attribute is to identify methods that are called once prior to executing any of the tests in a fixture
 
 Race Conditions
-    - It is defined as anomalous behavior due to unexpected critical dependence on the relative timing of events
+    - It is defined as anomalous behaviour due to unexpected critical dependence on the relative timing of events
     - This is a way of saying that 2 or more things are trying to work with the same data at the same time
     - Bugs in race conditions are pretty hard to find
 
@@ -235,7 +235,7 @@ Screenshots
     - Uses the ITakesScreenshot Interface then Current for the driver
     - There needs to be a path to save the image file
 
-WaitHelpers.ExpectedCondtions
+WaitHelpers.ExpectedConditions
     - This is a package form DotNetSeleniumExtras
     - ExpectedConditions in OpenQA.Selenium.Support.UI is deprecated so is not to be used
     

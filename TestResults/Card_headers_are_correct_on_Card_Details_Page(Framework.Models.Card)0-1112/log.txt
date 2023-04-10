@@ -1,4 +1,0 @@
-Starting Timestamp : 04/02/2021 12:25:45
-Test: Card_headers_are_correct_on_Card_Details_Page(Framework.Models.Card)
-[INFO]: Browser: chrome
-[INFO]: http://statsroyale.com
